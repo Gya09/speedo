@@ -51,14 +51,15 @@ function updateSpeedometer({ speed, rpm, fuel, health, nitro, gear }) {
 }
 
 // 🔹 Simulasi untuk test (hapus saat dipakai di RAGE)
-let testSpeed = 0, dir = 1;
-setInterval(() => {
-  testSpeed += dir * 4;
-  if (testSpeed > 240 || testSpeed < 0) dir *= -1;
-  const rpm = (testSpeed / 240) * 7000;
-  const fuel = 100 - testSpeed / 3;
-  const health = 100 - testSpeed / 4;
-  const nitro = (testSpeed / 240) * 100;
-  const gear = Math.floor(testSpeed / 40) + 1;
-  updateSpeedometer({ speed: testSpeed, rpm, fuel, health, nitro, gear });
-}, 120);
+//let testSpeed = 0, dir = 1;
+//setInterval(() => {
+//  testSpeed += dir * 4;
+//  if (testSpeed > 240 || testSpeed < 0) dir *= -1;
+//  const rpm = (testSpeed / 240) * 7000;
+//  const fuel = 100 - testSpeed / 3;
+//  const health = 100 - testSpeed / 4;
+//  const nitro = (testSpeed / 240) * 100;
+//  const gear = Math.floor(testSpeed / 40) + 1;
+//   updateSpeedometer({ speed: testSpeed, rpm, fuel, health, nitro, gear });
+// }, 120);
+

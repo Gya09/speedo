@@ -13,7 +13,7 @@ mp.events.add('render', () => {
     const gear = veh.gear;
 
     browser.execute(`updateSpeedometer({
-      speed: ${speed.toFixed(1)},
+      speed: ${speed.toFixed(0)},
       rpm: ${rpm.toFixed(0)},
       fuel: ${fuel.toFixed(0)},
       health: ${health.toFixed(0)},

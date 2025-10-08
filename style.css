@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.speedo-container {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 200px;
+  height: 220px;
+}
+
+.speed-ring {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 10;
+}
+
+.progress {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 534;
+  stroke-dashoffset: 534;
+  transition: stroke-dashoffset 0.15s linear, stroke 0.3s ease;
+}
+
+.progress.speed {
+  stroke: #00bfff;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#speed {
+  font-size: 44px;
+  font-weight: bold;
+  color: white;
+}
+
+.unit {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+#gear {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #00bfff;
+}
+
+.bars {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  width: 100%;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.bar span {
+  width: 40px;
+}
+
+.bar .fill {
+  flex: 1;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fill-inner {
+  height: 100%;
+  width: 0%;
+  background: #00bfff;
+  border-radius: 2px;
+  transition: width 0.2s ease, background 0.3s ease;
+}
